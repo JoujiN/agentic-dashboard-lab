@@ -77,6 +77,11 @@ Treat it as if it were a simplified Supabase-style session flow:
 - auth-gated UI should be explicit
 - do not introduce real network auth unless explicitly requested
 
+For small authenticated dashboard changes:
+- prefer wiring through existing auth surfaces (`useAuth`, `RequireAuth`, `DashboardLayout`) before changing provider shape
+- prefer new read-only widgets in `src/ui/widgets/` with mock data from `src/api/dashboard.ts`
+- add at least one user-visible test for the new behavior
+
 ## Definition of done
 A task is done when:
 - the requested behavior exists

@@ -23,6 +23,12 @@ Use this workflow when:
 5. Run relevant tests
 6. Summarize changes, assumptions, and follow-ups
 
+## Common small-feature shapes
+- auth behavior change:
+  inspect the auth provider, auth gate, layout entry point, and existing auth tests
+- dashboard widget:
+  inspect sibling widgets, `src/api/dashboard.ts`, `src/App.tsx`, and add one focused widget test
+
 Read:
 - `CHECKLIST.md` before editing
 - `prompt-template.md` when the task is ambiguous

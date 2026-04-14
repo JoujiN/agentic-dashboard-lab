@@ -23,3 +23,4 @@ Before finishing:
 - mention any edge cases not yet covered
 - propose a learning-focused commit message
 - include type, area, summary, and key observation
+- if you changed test scripts, Vitest config, test setup, or added new tests, run the full `npm run test -- --run` instead of only a targeted test
