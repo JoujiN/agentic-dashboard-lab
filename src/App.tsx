@@ -8,6 +8,7 @@ import { WelcomeWidget } from "./ui/widgets/WelcomeWidget";
 import { AccountSummaryWidget } from "./ui/widgets/AccountSummaryWidget";
 import { UsageStreakWidget } from "./ui/widgets/UsageStreakWidget";
 import { RecentActivityWidget } from "./ui/widgets/RecentActivityWidget";
+import { PlanStatusWidget } from "./ui/widgets/PlanStatusWidget";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
             <AccountSummaryWidget />
             <UsageStreakWidget />
             <RecentActivityWidget />
+            <PlanStatusWidget />
           </DashboardWidgetGroup>
         </DashboardLayout>
       </RequireAuth>

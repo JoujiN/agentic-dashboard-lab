@@ -13,6 +13,10 @@ export type RecentActivityItem = {
   summary: string;
 };
 
+export type PlanStatus = {
+  status: string;
+};
+
 export function getAccountSummary(): AccountSummary {
   return {
     planName: "Starter",
@@ -33,4 +37,10 @@ export function getRecentActivity(): RecentActivityItem[] {
     { id: "activity-2", summary: "Invited Maya to the workspace" },
     { id: "activity-3", summary: "Reviewed the onboarding checklist" },
   ];
+}
+
+export function getPlanStatus(): PlanStatus {
+  return {
+    status: "On track",
+  };
 }
