@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import App from "../src/App";
 
-test("shows the account summary widget on the authenticated dashboard", () => {
+test("shows the plan widget on the authenticated dashboard", () => {
   render(<App />);
 
   expect(
-    screen.getByRole("heading", { name: /account summary/i }),
+    screen.getByRole("heading", { name: /your plan/i }),
   ).toBeInTheDocument();
   expect(screen.getByText(/Plan: Starter/i)).toBeInTheDocument();
   expect(screen.getByText(/Projects: 2 \/ 5/i)).toBeInTheDocument();

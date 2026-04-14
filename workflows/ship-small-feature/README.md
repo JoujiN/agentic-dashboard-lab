@@ -49,6 +49,9 @@ For each analysis pass, return:
 
 Do not suggest new abstractions, files, or test layers unless the existing pattern clearly breaks.
 
+If no changes are made:
+- explicitly state that no tests were required because no files were modified
+
 Read:
 - `CHECKLIST.md` before editing
 - `prompt-template.md` when the task is ambiguous

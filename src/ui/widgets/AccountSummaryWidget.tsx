@@ -5,7 +5,7 @@ export function AccountSummaryWidget() {
 
   return (
     <section>
-      <h2>Account summary</h2>
+      <h2>Your Plan</h2>
       <p>Plan: {summary.planName}</p>
       <p>
         Projects: {summary.projectsUsed} / {summary.projectsLimit}
