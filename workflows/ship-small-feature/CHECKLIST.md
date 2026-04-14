@@ -18,3 +18,5 @@ Before finishing:
 - verify authenticated behavior if applicable
 - state assumptions
 - mention any edge cases not yet covered
+- propose a learning-focused commit message
+- include type, area, summary, and key observation
