@@ -4,6 +4,7 @@ import { DashboardLayout } from "./ui/layout/DashboardLayout";
 import { WelcomeWidget } from "./ui/widgets/WelcomeWidget";
 import { AccountSummaryWidget } from "./ui/widgets/AccountSummaryWidget";
 import { UsageStreakWidget } from "./ui/widgets/UsageStreakWidget";
+import { RecentActivityWidget } from "./ui/widgets/RecentActivityWidget";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           <WelcomeWidget />
           <AccountSummaryWidget />
           <UsageStreakWidget />
+          <RecentActivityWidget />
         </DashboardLayout>
       </RequireAuth>
     </AuthProvider>
