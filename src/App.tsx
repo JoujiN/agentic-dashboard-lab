@@ -1,6 +1,9 @@
 import { AuthProvider } from "./auth/auth-context";
 import { RequireAuth } from "./ui/auth/RequireAuth";
-import { DashboardLayout } from "./ui/layout/DashboardLayout";
+import {
+  DashboardLayout,
+  DashboardWidgetGroup,
+} from "./ui/layout/DashboardLayout";
 import { WelcomeWidget } from "./ui/widgets/WelcomeWidget";
 import { AccountSummaryWidget } from "./ui/widgets/AccountSummaryWidget";
 import { UsageStreakWidget } from "./ui/widgets/UsageStreakWidget";
@@ -11,10 +14,12 @@ export default function App() {
     <AuthProvider>
       <RequireAuth>
         <DashboardLayout>
-          <WelcomeWidget />
-          <AccountSummaryWidget />
-          <UsageStreakWidget />
-          <RecentActivityWidget />
+          <DashboardWidgetGroup>
+            <WelcomeWidget />
+            <AccountSummaryWidget />
+            <UsageStreakWidget />
+            <RecentActivityWidget />
+          </DashboardWidgetGroup>
         </DashboardLayout>
       </RequireAuth>
     </AuthProvider>
