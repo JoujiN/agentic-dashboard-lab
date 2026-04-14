@@ -4,6 +4,10 @@ export type AccountSummary = {
   projectsLimit: number;
 };
 
+export type WelcomeProfile = {
+  fullName: string;
+};
+
 export type UsageStreak = {
   days: number;
 };
@@ -22,6 +26,12 @@ export function getAccountSummary(): AccountSummary {
     planName: "Starter",
     projectsUsed: 2,
     projectsLimit: 5,
+  };
+}
+
+export function getWelcomeProfile(): WelcomeProfile {
+  return {
+    fullName: "George Nangle",
   };
 }
 

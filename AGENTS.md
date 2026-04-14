@@ -51,6 +51,14 @@ The app should feel like a realistic product surface, but remain intentionally s
 - Prefer simple tests over over-mocked implementation-heavy tests
 - For auth changes, verify both authenticated and unauthenticated cases where relevant
 
+## Decomposition rules
+Use subagent-style decomposition when the task meaningfully spans more than one concern, such as:
+- shared layout/composition
+- shared data shape
+- existing test behavior
+
+For small additive tasks with an obvious existing pattern, decomposition is optional rather than default.
+
 ## Workflow rules
 When asked to make a change:
 1. First inspect likely relevant files

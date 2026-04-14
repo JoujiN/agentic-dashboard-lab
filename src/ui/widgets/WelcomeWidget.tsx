@@ -1,12 +1,12 @@
-import { useAuth } from "../../auth/use-auth";
+import { getWelcomeProfile } from "../../api/dashboard";
 
 export function WelcomeWidget() {
-  const { user } = useAuth();
+  const profile = getWelcomeProfile();
 
   return (
     <section>
       <h2>Welcome</h2>
-      <p>{user ? `Signed in as ${user.fullName}` : "Not signed in"}</p>
+      <p>Signed in as {profile.fullName}</p>
     </section>
   );
 }
