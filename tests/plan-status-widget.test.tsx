@@ -7,5 +7,5 @@ test("shows the plan status widget on the authenticated dashboard", () => {
   expect(
     screen.getByRole("heading", { name: /plan status/i }),
   ).toBeInTheDocument();
-  expect(screen.getByText(/Current status: On track/i)).toBeInTheDocument();
+  expect(screen.getByText(/Current status: At risk/i)).toBeInTheDocument();
 });

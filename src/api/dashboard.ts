@@ -1,3 +1,5 @@
+import dashboardMetrics from "../../references/dashboard-metrics.json";
+
 export type AccountSummary = {
   planName: string;
   projectsUsed: number;
@@ -37,7 +39,7 @@ export function getWelcomeProfile(): WelcomeProfile {
 
 export function getUsageStreak(): UsageStreak {
   return {
-    days: 7,
+    days: dashboardMetrics.usageStreakDays,
   };
 }
 
@@ -51,6 +53,6 @@ export function getRecentActivity(): RecentActivityItem[] {
 
 export function getPlanStatus(): PlanStatus {
   return {
-    status: "On track",
+    status: dashboardMetrics.planStatus,
   };
 }
