@@ -15,6 +15,11 @@ During implementation:
 - avoid new dependencies
 - preserve mocked auth shape
 
+Validation rules:
+- run focused tests for isolated UI/data changes
+- run full test suite if test setup or multiple areas changed
+- run typecheck or build if config or data integration changes
+
 Before finishing:
 - update or add tests
 - run relevant test commands

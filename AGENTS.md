@@ -90,6 +90,14 @@ For small authenticated dashboard changes:
 - prefer new read-only widgets in `src/ui/widgets/` with mock data from `src/api/dashboard.ts`
 - add at least one user-visible test for the new behavior
 
+## External reference alignment
+
+When working against a spec, requirement, or external data:
+- compare first, do not assume a change is needed
+- identify exact mismatches
+- only implement changes that clearly improve alignment
+- keep alignment changes minimal and localized
+
 ## Definition of done
 A task is done when:
 - the requested behavior exists
