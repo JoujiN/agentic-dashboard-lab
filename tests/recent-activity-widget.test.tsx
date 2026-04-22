@@ -5,7 +5,7 @@ test("shows three recent activity items on the authenticated dashboard", () => {
   render(<App />);
 
   expect(
-    screen.getByRole("heading", { name: /recent account activity/i }),
+    screen.getByRole("heading", { name: /recent activity/i }),
   ).toBeInTheDocument();
   expect(screen.getByText(/Missed 3 days this week/i)).toBeInTheDocument();
   expect(screen.getByText(/No new projects created/i)).toBeInTheDocument();

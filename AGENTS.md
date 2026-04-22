@@ -125,3 +125,11 @@ What I learned:
 
 If no meaningful correction was needed, say:
 - no significant correction needed
+
+## Multi-issue selection rule
+
+When multiple open issues are viable:
+- compare them by blast radius, clarity of acceptance criteria, and number of concerns touched
+- prefer the issue that can be solved with the most localized change and one focused test
+- deprioritize issues that imply layout restructuring, shared data changes, or multi-widget coordination unless explicitly requested
+- before editing, explicitly state what should stay unchanged and why the chosen issue is the safest current move
