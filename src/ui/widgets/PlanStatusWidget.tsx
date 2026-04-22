@@ -4,8 +4,8 @@ export function PlanStatusWidget() {
   const planStatus = getPlanStatus();
   const isAtRisk = planStatus.status.toLowerCase() === "at risk";
   const statusGuidance = isAtRisk
-    ? "You are falling behind right now. Pay attention to the recent usage signals below."
-    : "You are doing well right now. Keep an eye on the recent usage signals below.";
+    ? "You are falling behind right now. Review your recent signals."
+    : "You are doing well right now. Review your recent signals.";
 
   return (
     <section>

@@ -6,7 +6,6 @@ export function RecentActivityWidget() {
   return (
     <section>
       <h2>Recent Activity</h2>
-      <p>Pay attention to these recent usage signals.</p>
       <ul>
         {activity.map((item) => (
           <li key={item.id}>{item.summary}</li>
