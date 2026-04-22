@@ -3,11 +3,13 @@
 
 Before editing:
 - identify likely files to inspect
+- classify the task shape and note what should stay unchanged
 - check current UI and auth patterns
 - confirm whether tests already cover similar behavior
 - verify the documented commands exist in the repo
 - run the baseline test command if the task is expected to end with tests
 - if the test infrastructure is broken, either fix it first or explicitly include that work in the minimal plan
+- if more than one issue or interpretation is viable, compare likely files touched, unchanged areas, and validation cost before choosing
 
 During implementation:
 - keep components focused

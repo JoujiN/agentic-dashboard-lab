@@ -70,6 +70,9 @@ When asked to make a change:
    - what assumptions were made
    - any follow-up risks or next steps
 
+Before planning, classify the task as `copy-only`, behavior, layout/composition, data-shape, or alignment, and default to the narrowest task shape.
+For copy-only tasks, do not change data logic, auth flow, or composition unless the request explicitly requires it.
+
 ## Feature design rules
 For new features:
 - start with a narrow version
@@ -97,6 +100,8 @@ When working against a spec, requirement, or external data:
 - identify exact mismatches
 - only implement changes that clearly improve alignment
 - keep alignment changes minimal and localized
+- when inputs conflict, resolve them in this order: repo instructions and workflows, then task-specific constraints or reference docs, then issue or stakeholder comments, then existing implementation
+- state the conflict and the winning constraint before editing
 
 ## Definition of done
 A task is done when:
@@ -130,6 +135,7 @@ If no meaningful correction was needed, say:
 
 When multiple open issues are viable:
 - compare them by blast radius, clarity of acceptance criteria, and number of concerns touched
+- for each viable issue, note likely files touched, what should stay unchanged, and validation cost before choosing
 - prefer the issue that can be solved with the most localized change and one focused test
 - deprioritize issues that imply layout restructuring, shared data changes, or multi-widget coordination unless explicitly requested
 - before editing, explicitly state what should stay unchanged and why the chosen issue is the safest current move

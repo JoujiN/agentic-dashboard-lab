@@ -17,7 +17,7 @@ Use this workflow when:
 
 ## Process
 1. Inspect likely relevant files first
-2. Explain the smallest viable implementation plan
+2. Classify the task shape and explain the smallest viable implementation plan
 3. Reuse existing patterns and component structure
 4. Implement the smallest safe change set
 5. Run relevant tests
@@ -29,6 +29,10 @@ Use this workflow when:
    - `What I learned`
 
 ## Common small-feature shapes
+Default to the narrowest task shape that matches the request.
+
+- copy-only change:
+  inspect the affected component and test first, and keep data logic, auth flow, and composition unchanged unless explicitly requested
 - auth behavior change:
   inspect the auth provider, auth gate, layout entry point, and existing auth tests
 - dashboard widget:
