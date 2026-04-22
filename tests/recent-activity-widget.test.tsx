@@ -7,7 +7,7 @@ test("shows three recent activity items on the authenticated dashboard", () => {
   expect(
     screen.getByRole("heading", { name: /recent activity/i }),
   ).toBeInTheDocument();
-  expect(screen.getByText(/Missed 2 days this week/i)).toBeInTheDocument();
+  expect(screen.getByText(/Missed 3 days this week/i)).toBeInTheDocument();
   expect(screen.getByText(/No new projects created/i)).toBeInTheDocument();
-  expect(screen.getByText(/Last login 3 days ago/i)).toBeInTheDocument();
+  expect(screen.getByText(/Last login 4 days ago/i)).toBeInTheDocument();
 });

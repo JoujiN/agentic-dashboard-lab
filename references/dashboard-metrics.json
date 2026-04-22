@@ -1,9 +1,10 @@
 {
   "planStatus": "At risk",
-  "usageStreakDays": 3,
+  "usageStreakDays": 2,
   "recentActivity": [
-    "Missed 2 days this week",
+    "Missed 3 days this week",
     "No new projects created",
-    "Last login 3 days ago"
-  ]
+    "Last login 4 days ago"
+  ],
+  "recommendation": "You should take action to get back on track this week."
 }

@@ -7,5 +7,5 @@ test("shows the usage streak widget on the authenticated dashboard", () => {
   expect(
     screen.getByRole("heading", { name: /usage streak/i }),
   ).toBeInTheDocument();
-  expect(screen.getByText(/Current streak: 3 days/i)).toBeInTheDocument();
+  expect(screen.getByText(/Current streak: 2 days/i)).toBeInTheDocument();
 });

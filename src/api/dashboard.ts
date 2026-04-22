@@ -23,6 +23,15 @@ export type PlanStatus = {
   status: string;
 };
 
+export function getPlanRecommendation(): string {
+  const needsAttention =
+    dashboardMetrics.planStatus.toLowerCase() === "at risk" ||
+    dashboardMetrics.usageStreakDays < 3;
+  const prefix = needsAttention ? "Next step" : "Keep going";
+
+  return `${prefix}: ${dashboardMetrics.recommendation}`;
+}
+
 export function getAccountSummary(): AccountSummary {
   return {
     planName: "Starter",
