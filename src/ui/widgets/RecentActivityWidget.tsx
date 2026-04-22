@@ -5,7 +5,7 @@ export function RecentActivityWidget() {
 
   return (
     <section>
-      <h2>Recent Activity</h2>
+      <h2>Recent Account Activity</h2>
       <ul>
         {activity.map((item) => (
           <li key={item.id}>{item.summary}</li>
