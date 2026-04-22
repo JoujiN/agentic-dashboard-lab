@@ -28,15 +28,15 @@ export function getPlanRecommendation(): string {
   const hasLowStreak = dashboardMetrics.usageStreakDays < 3;
 
   if (isAtRisk && hasLowStreak) {
-    return "Next step: take one small action today to rebuild consistency this week.";
+    return "Next step: you can start with one small action today and rebuild consistency this week.";
   }
 
   if (isAtRisk) {
-    return "Next step: take one small action this week to get back on track.";
+    return "Next step: you can start with one small action this week to get back on track.";
   }
 
   if (hasLowStreak) {
-    return "Keep going: take one small action today to rebuild consistency.";
+    return "Keep going: you can start with one small action today to rebuild consistency.";
   }
 
   return `Keep going: ${dashboardMetrics.recommendation.replace(/^You should /i, "").replace(/\.$/, ".")}`;
