@@ -10,7 +10,7 @@ test("shows the plan status widget on the authenticated dashboard", () => {
   expect(screen.getByText(/Current status: At risk/i)).toBeInTheDocument();
   expect(
     screen.getByText(
-      /Next step: you can start with one small action today because you missed 3 days this week and you have not created a new project recently\./i,
+      /Next step: try one small action today to get back on track\./i,
     ),
   ).toBeInTheDocument();
 });
