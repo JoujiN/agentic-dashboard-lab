@@ -104,3 +104,24 @@ A task is done when:
 - the implementation matches existing repo patterns
 - tests pass or any failures are clearly explained
 - assumptions and limitations are stated
+
+## Commit message rule
+
+When a task is complete, propose a learning-focused commit message using this format:
+
+<type>(area): short description
+
+What Codex did:
+- ...
+- ...
+
+What I had to correct:
+- ...
+- ...
+
+What I learned:
+- ...
+- ...
+
+If no meaningful correction was needed, say:
+- no significant correction needed

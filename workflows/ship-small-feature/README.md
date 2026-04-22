@@ -22,6 +22,11 @@ Use this workflow when:
 4. Implement the smallest safe change set
 5. Run relevant tests
 6. Summarize changes, assumptions, and follow-ups
+7. Propose a learning-focused commit message using the repo format:
+   - `<type>(area): short description`
+   - `What Codex did`
+   - `What I had to correct`
+   - `What I learned`
 
 ## Common small-feature shapes
 - auth behavior change:

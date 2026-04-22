@@ -18,6 +18,11 @@ Use this when:
    - typecheck/build
 6. Implement only if justified
 7. Summarize changes, assumptions, and risks
+8. Propose a learning-focused commit message using the repo format:
+   - `<type>(area): short description`
+   - `What Codex did`
+   - `What I had to correct`
+   - `What I learned`
 
 ## Rules
 - Do not change code if the repo already aligns well enough

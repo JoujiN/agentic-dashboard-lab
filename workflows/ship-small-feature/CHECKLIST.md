@@ -29,3 +29,10 @@ Before finishing:
 - propose a learning-focused commit message
 - include type, area, summary, and key observation
 - if you changed test scripts, Vitest config, test setup, or added new tests, run the full `npm run test -- --run` instead of only a targeted test
+- propose a learning-focused commit message
+    - include:
+        - type and area
+        - what Codex did
+        - what I had to correct
+        - what I learned
+    - if no meaningful correction was needed, state that explicitly
