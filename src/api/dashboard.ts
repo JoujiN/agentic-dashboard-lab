@@ -23,12 +23,37 @@ export type PlanStatus = {
   status: string;
 };
 
+function toActivityReason(summary: string): string {
+  if (/^Missed /i.test(summary)) {
+    return `you ${summary.charAt(0).toLowerCase()}${summary.slice(1)}`;
+  }
+
+  if (/^No new projects created$/i.test(summary)) {
+    return "you have not created a new project recently";
+  }
+
+  const lastLoginMatch = summary.match(/^Last login (.+)$/i);
+
+  if (lastLoginMatch) {
+    return `your last login was ${lastLoginMatch[1]}`;
+  }
+
+  return summary.charAt(0).toLowerCase() + summary.slice(1);
+}
+
 export function getPlanRecommendation(): string {
   const isAtRisk = dashboardMetrics.planStatus.toLowerCase() === "at risk";
   const hasLowStreak = dashboardMetrics.usageStreakDays < 3;
+  const activityReasons = dashboardMetrics.recentActivity
+    .slice(0, 2)
+    .map(toActivityReason);
+  const activityContext =
+    activityReasons.length === 2
+      ? `${activityReasons[0]} and ${activityReasons[1]}`
+      : activityReasons[0];
 
-  if (isAtRisk && hasLowStreak) {
-    return "Next step: you can start with one small action today and rebuild consistency this week.";
+  if (isAtRisk && hasLowStreak && activityContext) {
+    return `Next step: you can start with one small action today because ${activityContext}.`;
   }
 
   if (isAtRisk) {
