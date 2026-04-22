@@ -24,12 +24,22 @@ export type PlanStatus = {
 };
 
 export function getPlanRecommendation(): string {
-  const needsAttention =
-    dashboardMetrics.planStatus.toLowerCase() === "at risk" ||
-    dashboardMetrics.usageStreakDays < 3;
-  const prefix = needsAttention ? "Next step" : "Keep going";
+  const isAtRisk = dashboardMetrics.planStatus.toLowerCase() === "at risk";
+  const hasLowStreak = dashboardMetrics.usageStreakDays < 3;
 
-  return `${prefix}: ${dashboardMetrics.recommendation}`;
+  if (isAtRisk && hasLowStreak) {
+    return "Next step: take one small action today to rebuild consistency this week.";
+  }
+
+  if (isAtRisk) {
+    return "Next step: take one small action this week to get back on track.";
+  }
+
+  if (hasLowStreak) {
+    return "Keep going: take one small action today to rebuild consistency.";
+  }
+
+  return `Keep going: ${dashboardMetrics.recommendation.replace(/^You should /i, "").replace(/\.$/, ".")}`;
 }
 
 export function getAccountSummary(): AccountSummary {
