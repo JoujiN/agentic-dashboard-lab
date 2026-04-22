@@ -44,11 +44,10 @@ export function getUsageStreak(): UsageStreak {
 }
 
 export function getRecentActivity(): RecentActivityItem[] {
-  return [
-    { id: "activity-1", summary: "Created the Q2 planning board" },
-    { id: "activity-2", summary: "Invited Maya to the workspace" },
-    { id: "activity-3", summary: "Reviewed the onboarding checklist" },
-  ];
+  return dashboardMetrics.recentActivity.map((summary, index) => ({
+    id: `activity-${index + 1}`,
+    summary,
+  }));
 }
 
 export function getPlanStatus(): PlanStatus {

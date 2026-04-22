@@ -8,4 +8,9 @@ test("shows the plan status widget on the authenticated dashboard", () => {
     screen.getByRole("heading", { name: /plan status/i }),
   ).toBeInTheDocument();
   expect(screen.getByText(/Current status: At risk/i)).toBeInTheDocument();
+  expect(
+    screen.getByText(
+      /You are falling behind right now\. Pay attention to the recent usage signals below\./i,
+    ),
+  ).toBeInTheDocument();
 });
