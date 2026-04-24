@@ -8,5 +8,5 @@ test("shows the plan widget on the authenticated dashboard", () => {
     screen.getByRole("heading", { name: /your plan/i }),
   ).toBeInTheDocument();
   expect(screen.getByText(/Plan: Starter/i)).toBeInTheDocument();
-  expect(screen.getByText(/Projects: 2 \/ 5/i)).toBeInTheDocument();
+  expect(screen.getByText(/Projects used: 2 of 5/i)).toBeInTheDocument();
 });
