@@ -38,29 +38,35 @@ Default to the narrowest task shape that matches the request.
 - dashboard widget:
   inspect sibling widgets, `src/api/dashboard.ts`, `src/App.tsx`, and add one focused widget test
 
-## Decomposition rules
-Use subagent-style decomposition when the task meaningfully spans more than one concern, such as:
-- shared layout/composition
-- shared data shape
-- existing test behavior
-
-For small additive tasks with an obvious existing pattern, decomposition is optional rather than default.
-
 ## Subagent-style decomposition
 
-Use decomposition only when the task spans multiple concerns or the minimal path is not obvious.
+Use subagent-style decomposition when the task spans multiple concerns or the minimal path is not obvious, such as:
+- UI copy or component behavior
+- dashboard data shape or mock data
+- focused test coverage
+- external guidance or an issue where scope is ambiguous
 
-For each analysis pass, return:
-- Files to touch
-- What should stay unchanged
-- Smallest implementation path
-- Tests needed
+Do not use decomposition when:
+- the change is clearly copy-only in one file
+- the affected pattern is obvious from a sibling component
+- the task can be safely handled with one focused edit and one focused test
+- decomposition would add more process than clarity
 
-Do not suggest new abstractions, files, or test layers unless the existing pattern clearly breaks.
+Each subagent should return:
+- files inspected
+- proposed changes, if any
+- files they would be allowed to change
+- what must stay unchanged
+- risks, conflicts, or assumptions
+- recommendation: implement, partially implement, or make no change
 
-If no changes are made:
-- explicitly state that no tests were required because no files were modified
+The coordinator should:
+- compare proposals before editing
+- resolve conflicts using repo instructions first
+- choose the smallest useful implementation plan
+- explicitly decide whether to make a change or no change
+- keep execution limited to the chosen plan
 
-Read:
-- `CHECKLIST.md` before editing
-- `prompt-template.md` when the task is ambiguous
+Additional rules:
+- do not suggest new abstractions, files, or test layers unless the existing pattern clearly breaks
+- if no changes are made, explicitly state that no tests were required because no files were modified
