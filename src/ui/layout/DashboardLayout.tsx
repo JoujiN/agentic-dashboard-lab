@@ -18,7 +18,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <main>
-      <h1>Dashboard</h1>
+      <h1>Account Dashboard</h1>
       <button type="button" onClick={signOut}>
         Sign out
       </button>

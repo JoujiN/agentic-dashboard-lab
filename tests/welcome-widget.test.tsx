@@ -3,6 +3,9 @@ import App from "../src/App";
 
 test("shows signed-in user name on the dashboard", () => {
   render(<App />);
+  expect(
+    screen.getByRole("heading", { name: /account dashboard/i, level: 1 }),
+  ).toBeInTheDocument();
   expect(screen.getByText(/Signed in as George Nangle/i)).toBeInTheDocument();
 });
 
